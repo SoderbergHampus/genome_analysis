@@ -1,0 +1,7 @@
+pilon \
+--genome /home/haso0365/analysis/genome_assembly/canu/canu_genome_assembly.contigs.fasta \
+--bam /home/haso0365/analysis/bwa_alignment/bwa_output_sorted.bam \
+--diploid \
+--threads 2 \
+--output pilon_output \
+--outdir /home/haso0365/analysis/genome_assembly/pilon \
