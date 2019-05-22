@@ -15,12 +15,12 @@ module load samtools
 module load tophat/2.1.1
 
 # Create the loop to run tophat for all the trimmed transcriptome files
-for file in /home/haso0365/data/raw_data/transcriptome/trimmed/*11.1.fastaq.gz
+for file in /home/haso0365/data/raw_data/transcriptome/trimmed/*11.1.fastq.gz
 do
-	new_file="$(sed 's/11\.1/11.2' <<<$file)"
+	new_file="$(sed 's/11\.1/11.2/' <<<$file)"
 	output=$(basename $file)
 	tophat \
-		-o /home/haso0365/analysis/tophat/output_${output%.fastaq.gz} \
-		-p 4 /home/haso0365/analysis/genome_assembly/bowtie_indexed/indexed_genome
+		-o /home/haso0365/analysis/tophat/output_${output%.fastq.gz} \
+		-p 4 /home/haso0365/analysis/genome_assembly/bowtie_indexed/indexed_genome $file $new_file
 done
 
