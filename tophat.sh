@@ -21,6 +21,7 @@ do
 	output=$(basename $file)
 	tophat \
 		-o /home/haso0365/analysis/tophat/output_${output%.fastq.gz} \
-		-p 4 /home/haso0365/analysis/genome_assembly/bowtie_indexed/indexed_genome $file $new_file
+		-p 4 \
+		/home/haso0365/analysis/genome_assembly/bowtie_indexed/indexed_genome $file $new_file
 done
 
