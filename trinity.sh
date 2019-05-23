@@ -13,10 +13,10 @@ module load bioinfo-tools
 module load trinity
 
 # Run the actual assembly using trinity
-trinity \
+Trinity \
 	--genome_guided_bam /home/haso0365/analysis/tophat/merged_and_sorted/merged_sorted_transciptome.bam \
-	--output /home/haso0365/analysis/trinity/trinity_out/	
-	--max_memory <some_value> \
-	--genome_guided_max_intron <some value> \
+	--output /home/haso0365/analysis/trinity/trinity_out/ \
+	--max_memory 15G \
+	--genome_guided_max_intron 90000 \
 	--CPU 4
 
